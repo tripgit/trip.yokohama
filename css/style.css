@@ -1,0 +1,423 @@
+@charset "utf-8";
+/* 共通部分 */
+* {
+  box-sizing: border-box;
+}
+body {
+  font-size: 100%;
+  font-family: "Hiragino Maru Gothic ProN", sans-serif;
+  line-height: 1.6;
+  color: #443322;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  cursor: pointer;
+  color: grey
+}
+img {
+  max-width: 100%;
+}
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+footer {
+  background: #432;
+  text-align: center;
+  padding: 26px 0;
+}
+footer p {
+  color: #fff;
+}
+h1 {
+  height: 50px;
+  width: 150px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+h1 a {
+  color: #fff;
+  display: block;
+  line-height: 50px;
+  height: 50px;
+  font-size: 15px;
+  font-weight: normal; 
+  background-color: #0bd;
+  border-radius: 10px;
+  border: rgb(234,246,253) 1px solid;
+  padding: auto 10px;
+}
+h1 a:hover {
+  color: burlywood;
+  cursor: pointer;
+}
+nav ul {
+  display: flex;
+}
+nav a {
+  color: #432;
+  font-size: 22px;
+  padding-left: 12px;
+  padding-right: 12px;
+  line-height: 70px;
+  display: inline-block;
+}
+header {
+  background-color: burlywood;
+  height: 70px;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+}
+.page-header {
+  display: flex;
+  justify-content: space-between;
+}
+.rail {
+  width: 150px;
+  padding: 20px;
+  margin: 20px auto 0 auto;
+  text-align: center;
+}
+.rail a {
+  display: block;
+  font-size: 20px;
+  color: #432;
+  padding: 10px;
+}
+.rail a:hover {
+  color: gray;
+}
+
+/* home */
+#home {
+  background-color: blanchedalmond;
+  text-align: center;
+  min-height: 95vh;
+  background-size: cover;
+  padding-bottom: 10px;
+}
+.page-title {
+  margin: 0px auto;
+  width: 700px;
+  padding-top: 10%;
+  padding-bottom: 20px;
+}
+.page-title h2 {
+  font-size: 38px;
+  text-align: center;
+}
+.page-title p {
+  font-size: 24px;
+  text-align: center;
+}
+.slides {
+  width: 640px;
+  margin: 20px auto;
+  padding-bottom: 20px;
+} 
+.prev-btn {
+  font-size: 20px;
+  padding-bottom: 10px;
+  display: none;
+  float: left;
+}
+.next-btn {
+  font-size: 20px;
+  padding-bottom: 10px;
+  padding-right: 0;
+  float: right;
+}
+.change-btn:hover {
+  cursor: pointer;
+  color: grey;
+}
+.change {
+  overflow: hidden;
+}
+.slide {
+  display: none
+}
+.active {
+  display: block
+}
+
+/* kanko */
+#kanko {
+  background-color: blanchedalmond;
+  padding-bottom: 10px;
+}
+#kanko .kanko-grid {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.kanko-grid .item {
+  background-image: 
+  repeating-linear-gradient(#dcc8dc,navajowhite);
+  width: auto;
+  height: auto;
+  border-radius: 5px;
+  padding: 10px;
+}
+.kanko-grid .item a {
+  display: block;
+  color: #432;
+}
+.kanko-grid .item a:hover {
+  color: gray;
+}
+.kanko-grid .item p {
+  font-size: 17px;
+}
+#kanko iframe {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* subkaru */
+#subkaru {
+  background-color: bisque;
+  min-height: 100vh;
+  background-size: cover;
+}
+.model-title {
+  margin: 10px auto 5px auto;
+  text-align: center;
+  font-size: 23px;
+  padding: 15px 0 0 0;
+}
+.model {
+  width: 280px;
+  height: fit-content;
+  margin: 10px;
+  border: 1px solid black;
+}
+#subkaru h4 {
+  font-size: 20px;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 1px solid black;
+  background-color: darkgoldenrod;
+}
+.models {
+  display: flex;
+  justify-content: space-between;
+}
+.m-click {
+  overflow: hidden;
+}  
+.m-click:hover {
+  color: gray;
+  cursor: pointer;
+}
+.m-click h5 {
+  padding: 10px;
+  font-size: 16px;
+  overflow: hidden;
+  background-color: honeydew;
+}
+.m-click span {
+  float: right;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: lighter;
+}
+.m-comento {
+  display: none;
+  background-color: navajowhite;
+  border-bottom: 1px solid black;
+  font-size: 16px;
+  padding: 3px 10px;
+}
+.open {
+  display: block;
+}
+.subkaru-chizu {
+  width: 640px;
+  height: 480px;
+  margin: 30px auto;
+}
+
+/* koramu */
+#koramu {
+  background-color: #dfcba5;
+  background-size: cover;
+  min-height: 95vh;
+} 
+#koramu .koramu-grid {
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  margin-top: 30px;
+  padding-bottom: 30px;
+}
+.koramu-grid .item {
+  background-color: #f0e2bb;
+  width: auto;
+  height: auto;
+  border-radius: 5px;
+  padding: 15px;
+}
+.koramu-grid h3 {
+  text-align: center;
+  font-size: 22px;
+}
+.koramu-grid h4 {
+  font-size: 18px;
+  padding: 20px 0 0 0;
+}
+.koramu-grid a {
+  color: #432;
+}
+.koramu-grid a:hover {
+  color: gray;
+}
+.blue, .red {
+  padding: 20px;
+} 
+.koramu-grid p {
+  padding: 0 14px;
+  font-size: 17px;
+}
+.koramu-grid ul {
+  padding: 14px;
+  font-size: 17px; 
+}
+#robot img {
+  width: 80%;
+}  
+#robot:hover {
+  cursor: pointer;
+}
+.relative {
+  position: relative;
+  margin: 0 auto;
+  text-align: center;
+}
+#modal {
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  width: 85%;
+  margin: 0 auto;
+  background-color: #f0e2bb;
+  border-radius: 5px;
+  display: none;
+}
+#modal:hover {
+  cursor: pointer;
+}
+#modal p {
+  color: #432;
+  padding: 10px;
+}
+
+
+
+
+@media (max-width: 670px) {
+  /* 共通部分 */
+  header {
+    height: 110px;
+  }
+  .page-header {
+    flex-direction: column;
+    align-items: center;
+  }
+  h1 {
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    margin: 10px auto;
+  }
+  h1 a {
+    display: block;
+    font-size: 15px;
+    line-height: 30px;
+    height: 30px;
+  }
+  nav {
+    padding: 10px 0;
+    height: 50px;
+  }
+  nav a {
+    font-size: 19px;
+    padding-right: 10px;
+    padding-left: 10px;
+    line-height: 50px;
+  }
+  .page-title {
+    width: 250px;
+    padding-top: 33%;
+  }
+  .page-title h2 {
+    font-size: 25px;
+    padding-top: 15%;
+  }
+  .page-title p {
+    font-size: 18px;
+  }
+  .rail {
+    margin: 0 auto;
+  }
+  /* home */
+  .slides {
+    width: 90vw;
+    margin: 10px auto;
+  }
+  img {
+    max-width: 90vw;
+  }
+
+  /* kanko */
+  #kanko .kanko-grid {
+    gap: 15px;
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+  .kanko-grid a {
+    font-size: 19px;
+  }
+  .kanko-chizu iframe {
+    max-width: 100%;
+    margin: 20px auto;
+    height: 400px;
+  }
+ 
+  /* subkaru */
+ .models {
+   flex-direction: column;
+   align-items: center;
+ }
+ .model {
+   width: 80%;
+ }
+  #subkaru .subkaru-chizu {
+    width: 100%;
+    margin: 30px auto;
+  }
+  #subkaru iframe {
+    width: 100%;
+  }
+  
+  /* .koramu */
+  .blue, .red {
+    margin: 0 auto;
+  }
+  .blue img {
+    width: 90%;
+  }
+  .red img {
+    width: 90%;
+  }
+}    
